@@ -50,7 +50,7 @@ if eia_report is not None:
         docs = knowledge_base.similarity_search(query)
     
         # Initialize an OpenAI Model
-        llm = OpenAI()
+        llm = OpenAI(model="gpt-3.5-turbo-instruct")
     
         # Load a question-answering chain using the OpenAI model
         chain = load_qa_chain(llm, chain_type="stuff")
