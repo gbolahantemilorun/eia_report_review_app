@@ -10,8 +10,8 @@ from langchain.llms import OpenAI
 import openai
 
 # Load the env variables
-load_dotenv(dotenv_path=".env")
-# openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv(dotenv_path="/etc/secrets/.env")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Create a title and header
 st.title("EIA Report Review App")
